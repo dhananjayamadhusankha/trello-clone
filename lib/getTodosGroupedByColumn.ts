@@ -46,4 +46,6 @@ export const getTodosGroupedByColumn = async () => {
   );
 
   const board: Board = { columns: sortedColumns };
+
+  return board;
 };
