@@ -1,29 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect } from "react";
+import { useBearStore } from "@/store/BoardStore";
+import { useEffect, useRef } from "react";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function Board() {
+  const getBoard = useBearStore((state) => state.getBoard);
+  const hasFetched = useRef(false);
 
   useEffect(() => {
-    first
-  
-    return () => {
-      second
+    if (!hasFetched.current) {
+      getBoard();
+      hasFetched.current = true;
     }
-  }, [third])
-  
-  return (
-    <DragDropContext>
-      <Droppable
-        droppableId="board"
-        direction="horizontal"
-        type="column"
-      >
+  }, [getBoard]);
 
-      {(provided) => <div>{/* rendering all columns */}</div>}
-      </Droppable>
-    </DragDropContext>
+  return (
+    <div>hello</div>
+    // <DragDropContext>
+    //   <Droppable
+    //     droppableId="board"
+    //     direction="horizontal"
+    //     type="column"
+    //   >
+    //   {(provided) => <div>{/* rendering all columns */}</div>}
+    //   </Droppable>
+    // </DragDropContext>
   );
 }
 
