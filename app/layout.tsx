@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 
-
 export const metadata: Metadata = {
   title: 'Trello Clone',
   description: 'Developed by Dhananjaya Madhusankha',
