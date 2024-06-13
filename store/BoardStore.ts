@@ -8,7 +8,7 @@ interface BoardState {
   getBoard: () => void;
 }
 
-export const useBearStore = create<BoardState>((set) => ({
+export const useBoardStore = create<BoardState>((set) => ({
   board: {
     columns: new Map<TypedColumn, Column>(),
   },

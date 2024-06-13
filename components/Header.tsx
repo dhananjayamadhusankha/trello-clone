@@ -1,6 +1,7 @@
 "use client";
 
-import { Search, UserCircle } from "lucide-react";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { UserCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import React from "react";
 import Avatar from "react-avatar";
@@ -20,7 +21,7 @@ function Header() {
 
         <div className="flex space-x-4 w-full flex-1 justify-end">
           <form className="flex items-center space-x-5 bg-white rounded-md p-2 shadow-md flex-1 md:flex-initial">
-            <Search className="text-gray-400 h-6 w-6" />
+            <MagnifyingGlassIcon className="text-gray-400 h-6 w-6" />
             <input
               type="text"
               placeholder="Search"
@@ -41,13 +42,13 @@ function Header() {
       </div>
 
       <div className="flex items-center px-5 py-2 md:py-5 justify-center">
-        <div className="flex shadow-xl items-center text-sm font-light p-5 pr-5 bg-white rounded-xl w-fit max-w-3xl">
-          <UserCircle
+        <p className="text-[#0055d1] italic  shadow-xl text-sm font-light p-5 pr-5 bg-white rounded-xl w-fit max-w-3xl">
+          <UserCircleIcon
             fill="#0055d1"
             className="w-10 h-10 mr-1 inline-block text-white"
           />
-          <p className="text-[#0055d1] italic">GPT summersizing your task...</p>
-        </div>
+          GPT summersizing your task...
+        </p>
       </div>
     </header>
   );
